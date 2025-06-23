@@ -36,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent   = null;
-                if (rg.getCheckedRadioButtonId() == R.id.rb_second)
+                Intent intent = null;
+                if (rg.getCheckedRadioButtonId() == R.id.rb_second) {
                     intent = new Intent(getApplicationContext(), SecondActivity.class);
-                else
+                } else {
                     intent = new Intent(getApplicationContext(), ThirdActivity.class);
+                }
+                startActivity(intent);
             }
         });
-
-
     }
 }
